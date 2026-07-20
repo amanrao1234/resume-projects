@@ -1,16 +1,4 @@
-"""
-Trains the laptop price prediction model, replicating the feature engineering
-performed in notebooks_laptop-price-predictor.ipynb, and saves:
-  - df.pkl   -> the cleaned dataframe (used by the app to populate dropdowns)
-  - pipe.pkl -> the trained sklearn Pipeline (preprocessing + RandomForestRegressor)
 
-Note: the original notebook's final model was a StackingRegressor that included
-XGBoost. XGBoost isn't available in this environment, so RandomForestRegressor
-is used instead — it was one of the strongest individual models in the notebook
-(R2 ~0.88) and needs no extra dependencies beyond scikit-learn. If you have
-xgboost installed locally, feel free to swap back to the Stacking/XGB model —
-the app code doesn't need to change, since it just loads pipe.pkl.
-"""
 
 import numpy as np
 import pandas as pd
